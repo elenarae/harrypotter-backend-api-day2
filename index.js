@@ -1,10 +1,12 @@
 require('dotenv').config()
 const express = require('express');
+const cors = require ('cors')
 const app = express();
 const port = process.env.PORT;
 const characters = require('./harrypotter.json');
 //In-built middleware coming from express
 app.use(express.json())
+app.use(cos())
 
 app.get('/', (req,res)=>{
     res.send("Hello Harry Potter Characters")
